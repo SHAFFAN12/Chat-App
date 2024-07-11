@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import SimpleBarReact from 'simplebar-react';
 // @mui
-import { alpha, styled } from '@mui/material/styles';
-import { Box } from '@mui/material';
+import { styled, alpha } from '@mui/material/styles';
+import { Box, /*Stack*/ } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ const RootStyle = styled('div')(() => ({
 }));
 
 const SimpleBarStyle = styled(SimpleBarReact)(({ theme }) => ({
-  // maxHeight: '100%',
+   //maxHeight: '100%',
   '& .simplebar-scrollbar': {
     '&:before': {
       backgroundColor: alpha(theme.palette.grey[600], 0.48),
@@ -35,6 +35,25 @@ const SimpleBarStyle = styled(SimpleBarReact)(({ theme }) => ({
     height: '0 !important',
   }
 }));
+
+
+// const SimpleBarStyle = styled(Stack)({
+//   flexGrow: 1,
+//   overflowY: "auto",
+//   '&::-webkit-scrollbar': {
+//     width: '8px',
+//   },
+//   '&::-webkit-scrollbar-thumb': {
+//     backgroundColor: '#888',
+//     borderRadius: '4px',
+//   },
+//   '&::-webkit-scrollbar-thumb:hover': {
+//     backgroundColor: '#555',
+//   },
+// });
+
+
+
 
 // ----------------------------------------------------------------------
 
